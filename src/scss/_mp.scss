@@ -1,0 +1,19 @@
+// Margins
+
+$margins: (
+
+    m-0 : 0px,
+    m-10 : 10px,
+    m-20 : 20px,
+    m-30 : 30px,
+    m-40 : 40px,
+);
+
+@each $index, $value in $margins {
+
+    .#{$index}{
+
+        margin: #{$value};
+
+    }
+}

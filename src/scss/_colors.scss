@@ -1,0 +1,52 @@
+// Colors
+
+$backgroundColor: #db9d17;
+$background: #feb30d;
+$secondary: #443c51;
+$secondaryH: #4c425c;
+$hl: #ce5d73;
+$hlS: #eae7ee;
+$green: #04AA6D;
+$orange: #ff9800;
+$red: #f44336;
+
+// clases
+
+$colors:(
+
+backgroundColor: #db9d17,
+background: #feb30d,
+secondary: #443c51,
+secondaryH: #4c425c,
+hl: #ce5d73,
+hlS: #eae7ee,
+"green": #04AA6D,
+"orange": #ff9800,
+"red": #f44336,
+
+);
+
+
+// background
+
+@each $color, $value in $colors {
+
+    .#{$color}{
+
+        background: #{$value};
+
+    }
+    
+}
+
+// color
+
+@each $color, $value in $colors {
+
+    .c#{$color}{
+
+        color: #{$value};
+
+    }
+    
+}

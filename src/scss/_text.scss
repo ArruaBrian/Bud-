@@ -1,0 +1,31 @@
+// titulos
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+.tit{
+
+    font-family: 'Titillium Web';
+
+}
+
+.title2{
+
+    @extend .tit;
+    font-size: 27px;
+
+}
+
+.headLine{
+
+    @extend .tit;
+    font-size: 24px;
+
+}
+
+.body{
+
+    @extend .tit;
+    font-size: 17px;
+
+}
+

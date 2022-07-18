@@ -1,0 +1,264 @@
+// Dependeces
+
+@use "./colors" as *;
+@use "./text" as *;
+@use "./mp" as *;
+
+// navbar
+
+@forward "./navbar";
+
+// Body
+
+body {
+    background: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+// Main
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* ======================================================================================== */
+
+// Mix
+
+// Dots de las ventanas
+
+.dotWindow {
+    height: 15px;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+.dotWindowModal {
+    height: 15px;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.dotsContainer {
+    width: 55px;
+    height: 25px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+    position: relative;
+    top: 0;
+    left: 93%;
+}
+
+/* ======================================================================================== */
+
+// render
+
+.renderSection {
+    width: 80%;
+    height: 600px;
+    margin: 10px;
+    background: $background;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    filter: drop-shadow(0px 16px 40px $background);
+}
+
+.render {
+    width: 70%;
+    height: 100%;
+    background: $secondary;
+    border-radius: 10px;
+    padding: 15px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+// Container del render
+
+.renderContainer {
+    width: 100%;
+    height: 90%;
+    background: $secondaryH;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.renderOptions {
+    width: 30%;
+    height: 100%;
+    background: $hlS;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 30px;
+    gap: 20px;
+}
+
+// Option container
+
+.optionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    
+}
+
+// Box drag
+
+.boxDrag{
+
+    cursor: grab;
+
+}
+
+// Input de colores
+
+input[type="color" i] {
+    border: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+
+    &::-webkit-color-swatch {
+        border-radius: 10px;
+        border: none;
+
+    }
+
+    &:hover::-webkit-color-swatch {
+        outline: 1px solid $secondary;
+        outline-offset: 2px;
+
+    }
+}
+
+// ============ range reset
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 300px;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+    outline: none;
+}
+
+// ============ range
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: $hlS;
+    border-radius: 10px;
+    height: 0.5rem;
+    border: 1px solid $secondary;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: $secondary;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+
+    transition: all 0.2s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    
+    background-color: $hl;
+    transition: all 0.2s;
+
+}
+
+// Modal collapse
+
+.collapseModalBack{
+
+    background: rgba(68, 60, 81, 0);
+    transition: 1s ease-in-out;
+    visibility: hidden;
+
+}
+
+.startModalBack{
+
+    background: rgba(68, 60, 81, 0.494);
+    visibility: visible;
+    transition: 1s ease-in-out;
+    
+
+}
+
+.collapseModal{
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ease-in-out;
+    
+
+}
+
+.startModal{
+
+    opacity: 1;
+    visibility: visible;
+    transition: 1s ease-in-out;
+    
+
+}
+
+// Modal
+
+.modalStyle{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+

@@ -1,0 +1,44 @@
+// Dependeces
+
+@use "./colors" as *;
+
+
+// nav
+
+.navbar{
+
+    width: 80%;
+    height: 80px;
+    margin: 20px;
+    background: $secondary;
+    border-radius: 15px;
+    padding: 15px 30px 15px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    filter: drop-shadow(0px 16px 40px $background);
+
+}
+
+.logoNavbar{
+
+    background: url(../static/logo-s.svg);
+    width: 50px;
+    aspect-ratio: 1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 2px $hlS+#{91});
+    transition: filter 0.5s;
+    transform: rotate(15deg);
+
+
+    &:hover{
+
+        filter: drop-shadow(0px 0px 20px $hlS);
+        transition: filter 0.5s;
+
+    }
+}
